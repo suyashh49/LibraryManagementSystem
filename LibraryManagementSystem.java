@@ -64,3 +64,22 @@ class Book extends LibraryItem {
         System.out.println("Book: " + getTitle() + " by " + getAuthor() + ", Pages: " + pageCount);
     }
 }
+
+class DVD extends LibraryItem {
+    private int duration;
+
+    //getter functions
+    public DVD(String title, String author, int id, int duration) {
+        super(title, author, id);
+        this.duration = duration;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    @Override
+    public void displayDetails() {
+        System.out.println("DVD: " + getTitle() + " by " + getAuthor() + ", Duration: " + duration + " minutes");
+    }
+}
