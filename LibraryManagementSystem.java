@@ -105,3 +105,22 @@ class Library {
         }
     }
 }
+
+public class LibraryManagementSystem {
+    public static void main(String[] args) {
+        Library library = new Library();
+        
+        Book book1 = new Book("Can love happen twice?", "Ravinder Singh", 1, 218);
+        DVD dvd1 = new DVD("Interstellar", "Christopher Nolan", 2, 148);
+        
+        library.addItem(book1);
+        library.addItem(dvd1);
+        
+        library.showLibraryItems();
+        
+        book1.borrowItem(); // book is borrowed
+        book1.borrowItem(); // book is already borrowed for current reference
+        book1.returnItem(); // book is returned
+    }
+}
+
