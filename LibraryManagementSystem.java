@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.List;
+
+// abstracting the common properties and method
 abstract class LibraryItem {
     private String title;
     private String author;
@@ -81,5 +85,23 @@ class DVD extends LibraryItem {
     @Override
     public void displayDetails() {
         System.out.println("DVD: " + getTitle() + " by " + getAuthor() + ", Duration: " + duration + " minutes");
+    }
+}
+
+class Library {
+    private List<LibraryItem> items;
+
+    public Library() {
+        items = new ArrayList<>();
+    }
+
+    public void addItem(LibraryItem item) {
+        items.add(item);
+    }
+
+    public void showLibraryItems() {
+        for (LibraryItem item : items) {
+            item.displayDetails();
+        }
     }
 }
