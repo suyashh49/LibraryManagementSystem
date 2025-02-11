@@ -44,3 +44,23 @@ abstract class LibraryItem {
 
     public abstract void displayDetails(); // Abstract method
 }
+
+
+class Book extends LibraryItem {
+    private int pageCount;
+
+    //getter functions
+    public Book(String title, String author, int id, int pageCount) {
+        super(title, author, id);
+        this.pageCount = pageCount;
+    }
+
+    public int getPageCount() {
+        return pageCount;
+    }
+
+    @Override
+    public void displayDetails() {
+        System.out.println("Book: " + getTitle() + " by " + getAuthor() + ", Pages: " + pageCount);
+    }
+}
