@@ -50,6 +50,8 @@ abstract class LibraryItem {
 }
 
 
+//library items extended in Book and DVD classes
+
 class Book extends LibraryItem {
     private int pageCount;
 
